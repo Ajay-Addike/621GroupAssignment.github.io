@@ -14,16 +14,16 @@ let exp = document.getElementById("addhere");
 
 
 let array = [
-    {item : "ChickenPakodi",
-     imageUrl : "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png",
+    {item : "Crispy Corn",
+     imageUrl : "images/corn.jpeg",
      cost : 1
     },
-    {item : "ChickenPakodi",
-     imageUrl : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vegrecipesofindia.com%2Fpaneer-pakora-recipe-paneer-pakoras%2F&psig=AOvVaw1i2knZydEfUEzDyjL-7qFz&ust=1694587402503000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCLjysZO8pIEDFQAAAAAdAAAAABAP",
+    {item : "Chicken Curry",
+     imageUrl : "images/Chicken_Curry.jpeg",
      cost : 2
     },
-    {item : "ChickenPakodi",
-    imageUrl : "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png",
+    {item : "Chicken Biryani",
+    imageUrl : "images/Chicken_biryani.jpeg",
     cost : 3
     },
     
