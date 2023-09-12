@@ -4,6 +4,11 @@
     height: 70px;
     width: 80px;
 }
+.yellow-cart
+{
+    background-color: #183b56;
+    border-radius: 10px;
+}
 
 .image2 {
     height: 40px;
@@ -18,12 +23,14 @@
 
 .image-border {
     border-radius: 10px;
+    height: 65%;
 }
 
 .spa {
     font-weight: bold;
 
 }
+
 
 #cus4 {
     color: #323f4b;
@@ -51,14 +58,32 @@
 
 #cus2 {
     color: #323f4b;
-    ;
     font-family: "Bree Serif";
+}
+.signbutton
+{
+    margin-left:8px ;
+    height: 24px;
+    text-align: center;
+    align-self: center;
+}
+
+.h5-element
+{
+    margin-top: 16px;
+    margin-left: 8px;
 }
 
 .back {
     background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/foodmunch-banner-bg.png");
     background-size: cover;
     height: 100vh;
+}
+.round-image
+{
+    height: 60px;
+    
+    border-radius: 60px;
 }
 
 .center {
@@ -172,25 +197,25 @@
 
 .shopping
 {
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
     padding: 10px;
     margin-bottom: 4px;
 }
 
 .quantity
 {
-    background-color: red;
     border-radius: 10px;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    color: #fff;
-    height: 20px;
-    margin-top: 16px;
+    color:black;
     width: 20px;
-    padding: 10px;
-    text-align: center;
+    align-self: flex-start; /* Position the '0' above the cart */
+    position: absolute; /* Use absolute positioning */
+    margin-top: -15px; /* Adjust this value to position it precisely */
+    margin-left: 22px; /* Adjust this value to position it precisely */
+    cursor: pointer;
     
 }
 .span-div
@@ -206,21 +231,27 @@
 }
 
 .card{
-    position: fixed;
+    position:fixed;
     bottom:0;
     left: 100%;
     width: 500px;
     background-color: #453E3B;
-    height: 90%;
-    transition: 0.5s;
+    height: 86%;
+    transition: 0.2s;
+    
+    
 }
 .active .card{
     left: calc(100% - 500px);
 }
+.round
+{
+   width: 20px;
+}
 
-.active .container{
-    transform: translateX(-200px);
- }
+    /* .active .container{
+        transform: translateX(-200px);
+    } */
  .card h1{
      color: #E8BC0E;
      font-weight: 100;
@@ -234,34 +265,50 @@
      position: absolute;
      bottom: 0;
      width: 100%;
+     height: 15%;
      display: grid;
      grid-template-columns: repeat(2, 1fr);
+
+     
  
  }
  .card .checkOut div{
      background-color: #E8BC0E;
      width: 100%;
-     height: 70px;
+     height: 100%;
      display: flex;
      justify-content: center;
      align-items: center;
      font-weight: bold;
      cursor: pointer;
+
  }
  .card .checkOut div:nth-child(2){
      background-color: #1C1F25;
      color: #fff;
+
  }
+ .xyz
+ {
+    overflow-y: auto;
+    overflow-x: auto;
+    height: 85%;
+ }
+
  .listCard li{
      display: grid;
      grid-template-columns: 100px repeat(3, 1fr);
      color: #fff;
      row-gap: 10px;
+     
+     
  }
  .listCard li div{
      display: flex;
      justify-content: center;
      align-items: center;
+     
+     
  }
  .listCard li img{
      width: 90%;
@@ -278,3 +325,12 @@
  {
     display: none;
  }
+
+ .closeShopping
+{
+    height: 100%;
+}
+.total
+{
+    height: 100%;
+}

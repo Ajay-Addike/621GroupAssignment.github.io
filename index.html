@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 
+
+<!-- watch video and css for cart and cart calucations and check images for items popup for redeem -->
+
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -11,8 +14,8 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white  fixed-top">
+    <div class="container-fluid ">
+        <nav class="navbar navbar-expand-md navbar-light bg-white  fixed-top ">
             <a class="navbar-brand" href="#">
                 <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-img.png" class="image" />
             </a>
@@ -25,8 +28,8 @@
                         Why Choose Us ?
                         <span class="sr-only">(current)</span>
                     </a>
-                    <a class="nav-link" id="cus1" href="#explore">Explore</a>
                     <a class="nav-link" id="cus2" href="#exploremenu">Menu</a>
+                    <a class="nav-link" id="cus1" href="#watchVideo">Explore</a>
                     <a class="nav-link" id="cus3" href="#payment">Payment And Details</a>
                     <a class="nav-link" id="cus4" href="#Followus">Follow Us</a>
                 </div>
@@ -51,7 +54,7 @@
     </div>
     <div id="whychooseus">
         <div class="why-back ">
-            <div class="container">
+            <div class="container ">
                 <div class="row">
                     <div class="col-12">
                         <h1 class="mt-3">
@@ -102,127 +105,11 @@
         <div class="why-back">
             <div class=" container">
                 <div class="row">
-                    <div class="col-12">
-                        <h1 class="explore-menu-heading">
-                            Explore Menu
-                        </h1>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="explore-menu-card shadow mb-3 ">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png" class="w-100 image-border" />
-                            <h1 class="explore-menu-tittle">
-                                Non-veg Starters
-                            </h1>
-                            <a href="" class="explore-menu-link">
-                                View All
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="explore-menu-card shadow mb-3 ">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-veg-starters-img.png" class="w-100 image-border" />
-                            <h1 class="explore-menu-tittle">
-                                Veg Starters
-                            </h1>
-                            <p class="d-none" id="value">
-                                500
-                            </p>
-                            <button class="btn btn-primary" id="button1">
-                                Add to Cart
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="explore-menu-card shadow mb-3 ">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-soup-img.png" class="w-100 image-border" />
-                            <h1 class="explore-menu-tittle">
-                                Soups
-                            </h1>
-                            <a href="" class="explore-menu-link">
-                                View All
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="explore-menu-card shadow mb-3 ">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png" class="w-100 image-border" />
-                            <h1 class="explore-menu-tittle">
-                                Fish & sea food
-                            </h1>
-                            <a href="" class="explore-menu-link">
-                                View All
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="explore-menu-card shadow mb-3 ">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-hyderabadi-biryani-img.png" class="w-100 image-border" />
-                            <h1 class="explore-menu-tittle">
-                                Main Course
-                            </h1>
-                            <a href="" class="explore-menu-link">
-                                View All
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="explore-menu-card shadow mb-3 ">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-mushroom-noodles-img.png" class="w-100 image-border" />
-                            <h1 class="explore-menu-tittle">
-                                Noddles
-                            </h1>
-                            <a href="" class="explore-menu-link">
-                                View All
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="explore-menu-card shadow mb-3 ">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-gluten-img.png" class="w-100 image-border" />
-                            <h1 class="explore-menu-tittle">
-                                Salads
-                            </h1>
-                            <a href="" class="explore-menu-link">
-                                View All
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="explore-menu-card shadow mb-3 ">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-coffee-bourbon-img.png" class="w-100 image-border" />
-                            <h1 class="explore-menu-tittle">
-                                Deserts
-                            </h1>
-                            <a href="" class="explore-menu-link">
-                                View All
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
+                    <h1 class="explore-menu-heading">
+                             Menu
+                    </h1>
+                    <div class="col-12 d-flex flex-row flex-wrap" id="addhere" >
+                    </div> 
                 </div>
             </div>
         </div>
@@ -236,14 +123,14 @@
                             <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/healthy-food-plate-img.png" class="image1" />
                         </div>
                     </div>
-                    <div class="col-12 col-md-7">
+                    <div class="col-12 col-md-7" id="watchVideo">
                         <h1>
                             Fresh, Healthy, Organic, Delicious Fruits
                         </h1>
                         <p>
                             Say no to harmful chemicals and go fully organic with our range of fresh fruits and veggies. Pamper your body and your senses with the true and unadulterated gifts from mother nature. with the true and unadulterated gifts from mother nature.
                         </p>
-                        <button class=" button ">
+                        <button class=" button " onclick="window.location.href = 'youtube.html';">
                             Watch Video
                         </button>
                     </div>
@@ -338,27 +225,33 @@
             </div>
         </div>
     </div>
-    <nav class="container fixed-bottom text-right" id="cart">
+    <nav class="container fixed-bottom text-right mb-5  " id="cart">
         <div class="d-flex flex-column justify-content-center">
-            <div class="d-flex flex-row justify-content-end span-div">
-                <span id="number" class="quantity">0</span>
+            
+            <div class="d-flex flex-row justify-content-end " >
+                <div class="d-flex flex-column justify-content-center " >
+                    <span id="number" class="quantity">0</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="shopping yellow-cart"  viewBox="0 0 576 512"><style>svg{fill:#f2eb07}</style><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                </div>      
             </div>
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="shopping" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#f2eb07}</style><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
-            </div>
+           
         </div>
        
     </nav>
-    <div class="card" >
-        <h1>Cart</h1>
-        <ul class="listCard" id="cart-items">
-        </ul>
-        <div class="checkOut">
+    <nav class="card " id="cartdiv">
+        <div class="xyz">
+            <h1>Cart</h1>
+            <ul class="listCard" id="cart-items">
+            </ul>
+
+        </div>
+        <div class="checkOut mt-5">
             <div id ="total" class="total">0</div>
             <div class="closeShopping">Close</div>
         </div>
-    </div>
+    </nav>
     <script src="index.js"></script>
+    
 </body>
 
 </html>

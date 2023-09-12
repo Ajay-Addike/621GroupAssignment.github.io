@@ -8,82 +8,187 @@ let quantity = document.querySelector('.quantity');
 let cartItemsEle = document.getElementById("cart-items");
 let totalEle = document.getElementById("total");
 let valueElement = document.getElementById("value");
-
-//let createElement = document.getElementById("cart");
-
-// createElement.addEventListener("click" , ()=>
-// {
-//     createElement.classList.add("none");
-// })
-
-
 let numberElement = document.getElementById("number");
 let buttonelement = document.getElementById("button1");
+let exp = document.getElementById("addhere");
 
-button1.addEventListener("click" , (event)=>
-{
-    let parsednumber = parseInt(numberElement.textContent);
-    let parsedvalue = parseInt(valueElement.textContent);
-    parsednumber++;
-    numberElement.textContent = parsednumber;
-    parsedvalue = parsedvalue *parsednumber;
-    totalEle.textContent = parsedvalue;
-    let liElement = document.createElement("li");
-    liElement.textContent = "hello"; 
-    cartItemsEle.appendChild(liElement);
 
-})
+let array = [
+    {item : "ChickenPakodi",
+     imageUrl : "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png",
+     cost : 1
+    },
+    {item : "ChickenPakodi",
+     imageUrl : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vegrecipesofindia.com%2Fpaneer-pakora-recipe-paneer-pakoras%2F&psig=AOvVaw1i2knZydEfUEzDyjL-7qFz&ust=1694587402503000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCLjysZO8pIEDFQAAAAAdAAAAABAP",
+     cost : 2
+    },
+    {item : "ChickenPakodi",
+    imageUrl : "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png",
+    cost : 3
+    },
+    
+  ];
+  
+
+  
+
+ 
+ 
+ function addtomenu(obj)
+ {
+    let costvalue =totalEle.textContent;
+    let count;
+     let {item,imageUrl,cost} = obj;
+     let divelement1 = document.createElement("div");
+     let divelement2 = document.createElement("div");
+     divelement2.classList.add("h-100");
+     let imageEle = document.createElement("img");
+
+     let headerEle = document.createElement("h1");
+     headerEle.textContent = item;
+     headerEle.classList.add("explore-menu-tittle");
+     let buttonEle = document.createElement("button");
+     buttonEle.textContent = "Add to Cart";
+     buttonEle.classList.add("btn" , "btn-primary");
+     buttonEle.addEventListener("click" , function()
+     {
+        let parsednumber = parseInt(numberElement.textContent);
+        parsednumber++;
+        numberElement.textContent = parsednumber;
+        let parsedvalue = parseInt(totalEle.textContent);
+        parsedvalue = parsedvalue  + cost;
+        totalEle.textContent = parsedvalue;
+        let liElement = document.createElement("li");
+        let imageELement = document.createElement("img");
+        imageELement.src = imageUrl;
+        imageELement.style.width = 60+"px";
+        imageELement.classList.add("round-image");  
+        let h5Element = document.createElement("h5");
+        h5Element.textContent = item; 
+        h5Element.classList.add("h5-element");  
+        let paraElement = document.createElement("p");
+        paraElement.textContent = cost;
+        paraElement.classList.add("h5-element");
+        
+        let numberpara = document.createElement("p");
+        numberpara.textContent ="1";
+        numberpara.classList.add("h5-element");
+        let minusElement = document.createElement("button");
+        minusElement.textContent = "-";
+        minusElement.classList.add("signbutton")
+        minusElement.addEventListener("click" , function()
+        {
+            count = parseInt(numberpara.textContent);
+            count--;
+            numberpara.textContent = count;
+            if(count <= 0)
+            {
+                numberpara.textContent = "0";   
+            }
+            if(count>=0)
+            {
+                let y = parseInt(totalEle.textContent);
+                y=y-cost;
+                totalEle.textContent = y;
+
+            }
+            
+        }) 
+        let plusElement = document.createElement("button");  
+        plusElement.textContent = "+";
+        plusElement.classList.add("signbutton");
+        plusElement.addEventListener("click" , function()
+        {
+            count = parseInt(numberpara.textContent);
+            count++;
+            numberpara.textContent = count;
+            let x = parseInt(totalEle.textContent);
+            x= x+cost;
+            totalEle.textContent = x;
+
+        }) 
+        liElement.appendChild(imageELement);
+        liElement.appendChild(h5Element);
+        liElement.appendChild(paraElement);
+        liElement.appendChild(minusElement);
+        liElement.appendChild(numberpara);
+        liElement.appendChild(plusElement);
+        liElement.classList.add("d-flex", "flex-row","mb-3");
+        cartItemsEle.appendChild(liElement);
+     })
+     imageEle.src = imageUrl;
+     divelement1.classList.add("col-12", "col-md-6", "col-lg-3" , "mb-3");
+     divelement2.classList.add("explore-menu-card", "shadow", "mb-3" );
+     imageEle.classList.add("w-100","image-border" , );
+     divelement2.appendChild(imageEle);
+     divelement2.appendChild(headerEle);
+     divelement2.appendChild(buttonEle);
+     divelement1.appendChild(divelement2);
+     exp.appendChild(divelement1);
+    
+ }
+ 
+ for(let each of array)
+ {
+     addtomenu(each);
+ }
+
+
+
 
 
 
 openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
     openShopping.classList.add("none");
+    quantity.classList.add("none");
+    
     
 })
 closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
     openShopping.classList.remove("none");
+    quantity.classList.remove("none");
 })
 
-let products = [
-    {
-        id: 1,
-        name: 'PRODUCT NAME 1',
-        image: '1.PNG',
-        price: 120000
-    },
-    {
-        id: 2,
-        name: 'PRODUCT NAME 2',
-        image: '2.PNG',
-        price: 120000
-    },
-    {
-        id: 3,
-        name: 'PRODUCT NAME 3',
-        image: '3.PNG',
-        price: 220000
-    },
-    {
-        id: 4,
-        name: 'PRODUCT NAME 4',
-        image: '4.PNG',
-        price: 123000
-    },
-    {
-        id: 5,
-        name: 'PRODUCT NAME 5',
-        image: '5.PNG',
-        price: 320000
-    },
-    {
-        id: 6,
-        name: 'PRODUCT NAME 6',
-        image: '6.PNG',
-        price: 120000
-    }
-];
+// let products = [
+//     {
+//         id: 1,
+//         name: 'PRODUCT NAME 1',
+//         image: '1.PNG',
+//         price: 120000
+//     },
+//     {
+//         id: 2,
+//         name: 'PRODUCT NAME 2',
+//         image: '2.PNG',
+//         price: 120000
+//     },
+//     {
+//         id: 3,
+//         name: 'PRODUCT NAME 3',
+//         image: '3.PNG',
+//         price: 220000
+//     },
+//     {
+//         id: 4,
+//         name: 'PRODUCT NAME 4',
+//         image: '4.PNG',
+//         price: 123000
+//     },
+//     {
+//         id: 5,
+//         name: 'PRODUCT NAME 5',
+//         image: '5.PNG',
+//         price: 320000
+//     },
+//     {
+//         id: 6,
+//         name: 'PRODUCT NAME 6',
+//         image: '6.PNG',
+//         price: 120000
+//     }
+// ];
 let listCards  = [];
 function initApp(){
     products.forEach((value, key) =>{
