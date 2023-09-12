@@ -12,6 +12,25 @@ let numberElement = document.getElementById("number");
 let buttonelement = document.getElementById("button1");
 let exp = document.getElementById("addhere");
 
+$ = function(id) {
+    return document.getElementById(id);
+}
+  
+var show = function(id) {
+    $(id).style.display ='block';
+    document.body.style.overflow = "hidden";
+
+}
+var hide = function(id) {
+    document.body.style.overflow = "visible";
+    $(id).style.display ='none';
+}
+
+function copyToClipboard(element) {
+    /* Copy text into clipboard */
+    navigator.clipboard.writeText
+        ("FOOD MUNCH 25");
+}  
 
 let array = [
     {item : "Crispy Corn",

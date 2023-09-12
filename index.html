@@ -177,9 +177,23 @@
                         </p>
                         <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="image1 d-md-none" />
                         <div>
-                            <button class="button">
+                            <button class="button" onclick="show('popup')">
                                 Redeem Now
                             </button>
+                             <!-- This is what will be included inside the popup -->
+                            <div class="popup" id="popup">
+                                <p class="p1" >PROMO CODE</p>
+                                <br/>
+                                <p class="p2" id="p2">FOOD MUNCH 25</p>
+                                <br/>
+                                <br/>
+                                <div>
+                                    <button id="closeBTN" class="btn btn-secondary"  onclick="hide('popup')">Close</button>
+                                    <button id="promoBTN" class="btn btn-primary" onclick="copyToClipboard('#p2')">Copy</button>
+                                </div>
+                                <br/>
+                                <br/>
+                            </div>
                         </div>
                     </div>
                 </div>
